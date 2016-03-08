@@ -11,5 +11,9 @@ var modules = [
 ];
 
 modules.forEach(function(name){
-	copy("node_modules/" + name, "test/tests/node_modules/" + name);
+	try {
+		copy("node_modules/" + name, "test/tests/node_modules/" + name);
+	} catch(err) {
+		// In NPM 2 it will throw for modules which are nested, we can ignore
+	}
 });
