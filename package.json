@@ -1,0 +1,43 @@
+{
+  "name": "done-ssr-middleware",
+  "version": "0.1.0",
+  "description": "Express/Connect middleware for DoneJS applications",
+  "main": "lib/index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "copy": "node scripts/copy.js",
+    "mocha": "mocha test/test.js",
+    "test": "npm run copy && npm run mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/donejs/done-ssr-middleware.git"
+  },
+  "keywords": [
+    "DoneJS",
+    "server-side",
+    "rendering"
+  ],
+  "author": "Bitovi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/donejs/done-ssr-middleware/issues"
+  },
+  "homepage": "https://github.com/donejs/done-ssr-middleware#readme",
+  "devDependencies": {
+    "can": "^2.3.0-pre || ^2.3.0-beta || ^2.3.0",
+    "copy-dir": "0.0.8",
+    "done-autorender": "^0.7.0",
+    "express": "^4.13.4",
+    "mocha": "^2.4.5",
+    "request": "^2.69.0"
+  },
+  "dependencies": {
+    "done-autorender": "^0.7.0",
+    "done-ssr": "^0.12.0-pre.1",
+    "websocket": "^1.0.22",
+    "xmlhttprequest": "^1.7.0"
+  }
+}
