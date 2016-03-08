@@ -6,6 +6,8 @@ var express = require('express');
 var ssr = require('../lib/index');
 
 describe("done-ssr middleware", function() {
+	this.timeout(10000);
+
 	it('uses middleware in an Express application', function(done) {
 		var root = path.join(__dirname, 'tests');
 		var app = express()
