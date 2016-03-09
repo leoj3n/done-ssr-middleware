@@ -36,7 +36,7 @@
   },
   "dependencies": {
     "done-autorender": "^0.7.0",
-    "done-ssr": "^0.12.0-pre.1",
+    "done-ssr": "^0.12.0",
     "websocket": "^1.0.22",
     "xmlhttprequest": "^1.7.0"
   }
