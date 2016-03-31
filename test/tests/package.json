@@ -6,12 +6,16 @@
     "can": "^2.3.0",
     "done-autorender": "^0.6.0"
   },
+  "devDependencies": {
+    "can-fixture": "^0.1.2"
+  },
   "system": {
     "envs": {
       "someenv": {
 		"renderingBaseURL": "http://example.com/",
 		"FOO": "bar"
       }
-    }
+    },
+	"npmAlgorithm": "flat"
   }
 }

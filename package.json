@@ -28,6 +28,7 @@
   "homepage": "https://github.com/donejs/done-ssr-middleware#readme",
   "devDependencies": {
     "can": "^2.3.0-pre || ^2.3.0-beta || ^2.3.0",
+    "can-fixture": "^0.1.2",
     "copy-dir": "0.0.8",
     "done-autorender": "^0.7.0",
     "express": "^4.13.4",
@@ -37,6 +38,7 @@
   "dependencies": {
     "done-autorender": "^0.7.0",
     "done-ssr": "^0.12.0",
+    "nock": "^7.2.2",
     "websocket": "^1.0.22",
     "xmlhttprequest": "^1.7.0"
   }
