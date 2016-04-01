@@ -8,7 +8,7 @@
   },
   "scripts": {
     "copy": "node scripts/copy.js",
-    "mocha": "mocha test/test.js",
+    "mocha": "node test/test.js",
     "test": "npm run copy && npm run mocha"
   },
   "repository": {
@@ -33,7 +33,8 @@
     "done-autorender": "^0.7.0",
     "express": "^4.13.4",
     "mocha": "^2.4.5",
-    "request": "^2.69.0"
+    "request": "^2.69.0",
+    "spawn-mochas": "^1.1.0"
   },
   "dependencies": {
     "done-autorender": "^0.7.0",

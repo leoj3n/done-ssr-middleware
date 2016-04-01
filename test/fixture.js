@@ -45,7 +45,6 @@ describe("Using can-fixture", function(){
 
 	it("Returns a response", function(done){
 			request('http://localhost:5500', function(err, res, body) {
-				console.log("BODY:", body)
 				assert.equal(res.statusCode, 200);
 				done();
 			});
