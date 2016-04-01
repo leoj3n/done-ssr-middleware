@@ -8,7 +8,7 @@
   },
   "scripts": {
     "copy": "node scripts/copy.js",
-    "mocha": "mocha test/test.js",
+    "mocha": "node test/test.js",
     "test": "npm run copy && npm run mocha"
   },
   "repository": {
@@ -28,15 +28,18 @@
   "homepage": "https://github.com/donejs/done-ssr-middleware#readme",
   "devDependencies": {
     "can": "^2.3.0-pre || ^2.3.0-beta || ^2.3.0",
+    "can-fixture": "^0.1.2",
     "copy-dir": "0.0.8",
     "done-autorender": "^0.7.0",
     "express": "^4.13.4",
     "mocha": "^2.4.5",
-    "request": "^2.69.0"
+    "request": "^2.69.0",
+    "spawn-mochas": "^1.1.0"
   },
   "dependencies": {
     "done-autorender": "^0.7.0",
     "done-ssr": "^0.12.0",
+    "nock": "^7.2.2",
     "websocket": "^1.0.22",
     "xmlhttprequest": "^1.7.0"
   }
