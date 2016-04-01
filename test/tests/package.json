@@ -15,7 +15,6 @@
 		"renderingBaseURL": "http://example.com/",
 		"FOO": "bar"
       }
-    },
-	"npmAlgorithm": "flat"
+    }
   }
 }
