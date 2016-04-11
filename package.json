@@ -38,7 +38,7 @@
   },
   "dependencies": {
     "done-autorender": "^0.7.0",
-    "done-ssr": "^0.12.0",
+    "done-ssr": "donejs/done-ssr#timeout",
     "nock": "^7.2.2",
     "websocket": "^1.0.22",
     "xmlhttprequest": "^1.7.0"
