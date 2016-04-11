@@ -35,6 +35,9 @@ app.use('/', ssr({
 
 __Note:__ Make sure the ssr middleware is the last middleware in the chain but before the error handler. Errors when rendering the application will be passed to your Express error handler. Error status codes (e.g. 404s or others) will be rendered with the application.
 
+## Options
+
+This module shares the same [system](https://github.com/donejs/done-ssr#system) and [options](https://github.com/donejs/done-ssr#options) arguments as done-ssr.
 
 ## License
 

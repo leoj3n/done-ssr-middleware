@@ -1,6 +1,6 @@
 {
   "name": "done-ssr-middleware",
-  "version": "0.1.5",
+  "version": "0.2.0-pre.0",
   "description": "Express/Connect middleware for DoneJS applications",
   "main": "lib/index.js",
   "directories": {
@@ -38,7 +38,7 @@
   },
   "dependencies": {
     "done-autorender": "^0.7.0",
-    "done-ssr": "^0.12.0",
+    "done-ssr": "^0.13.0",
     "nock": "^7.2.2",
     "websocket": "^1.0.22",
     "xmlhttprequest": "^1.7.0"
