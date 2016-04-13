@@ -32,6 +32,7 @@
     "copy-dir": "0.0.8",
     "done-autorender": "^0.7.0",
     "express": "^4.13.4",
+    "jquery": "^2.2.3",
     "mocha": "^2.4.5",
     "request": "^2.69.0",
     "spawn-mochas": "^1.1.0"
