@@ -1,6 +1,6 @@
 {
   "name": "done-ssr-middleware",
-  "version": "0.4.0-pre.0",
+  "version": "1.0.0-alpha.0",
   "description": "Express/Connect middleware for DoneJS applications",
   "main": "lib/index.js",
   "directories": {
