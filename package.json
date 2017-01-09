@@ -43,7 +43,7 @@
     "spawn-mochas": "^1.1.0"
   },
   "dependencies": {
-    "done-ssr": "^0.14.0-pre.2",
+    "done-ssr": "^1.0.0-alpha.1",
     "nock": "^7.2.2",
     "websocket": "^1.0.22",
     "xmlhttprequest": "^1.7.0"
