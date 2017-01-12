@@ -24,6 +24,8 @@ describe("done-ssr middleware", function() {
 				assert.ok(/You are home/.test(body), 'Got body');
 				assert.ok(/Showing: \//.test(body),
 						  'The request object is accessible from the AppViewModel');
+				assert.ok(/progressive\/index.stache!done-autorender/.test(body),
+							'The "main" is set correctly')
 
 				var contentType = res.headers['content-type'];
 				assert.equal(contentType, 'text/html; charset=utf-8',

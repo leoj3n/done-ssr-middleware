@@ -1,7 +1,7 @@
 {
   "name": "basics-can",
   "version": "0.0.1",
-  "main": "progressive/index.stache!done-autorender",
+  "main": "does-not-exist.stache!done-autorender",
   "dependencies": {
     "can-component": "^3.0.4",
     "can-fixture": "^1.0.11",
@@ -10,14 +10,19 @@
     "can-map-define": "^3.0.2",
     "can-route": "^3.0.6",
     "can-route-pushstate": "^3.0.1",
-    "done-autorender": "^1.0.0-alpha.0"
+    "done-autorender": "^1.0.0-alpha.0",
+    "done-css": "^3.0.0-alpha.2"
   },
-  "system": {
+  "steal": {
+    "main": "progressive/index.stache!done-autorender",
     "envs": {
       "someenv": {
         "renderingBaseURL": "http://example.com/",
         "FOO": "bar"
       }
-    }
+    },
+    "plugins": [
+      "done-css"
+    ]
   }
 }
