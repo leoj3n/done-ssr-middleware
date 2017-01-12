@@ -13,7 +13,7 @@
     "done-autorender": "^1.0.0-alpha.0",
     "steal-css": "^1.2.0"
   },
-  "system": {
+  "steal": {
     "main": "progressive/index.stache!done-autorender",
     "envs": {
       "someenv": {
