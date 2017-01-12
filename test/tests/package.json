@@ -11,7 +11,7 @@
     "can-route": "^3.0.6",
     "can-route-pushstate": "^3.0.1",
     "done-autorender": "^1.0.0-alpha.0",
-    "steal-css": "^1.2.0"
+    "done-css": "^3.0.0-alpha.2"
   },
   "steal": {
     "main": "progressive/index.stache!done-autorender",
@@ -22,7 +22,7 @@
       }
     },
     "plugins": [
-      "steal-css"
+      "done-css"
     ]
   }
 }
