@@ -9,7 +9,11 @@
   "scripts": {
     "copy": "node scripts/copy.js",
     "mocha": "node test/test.js",
-    "test": "npm run copy && npm run mocha"
+    "test": "npm run copy && npm run mocha",
+    "publish": "git push origin && git push origin --tags",
+    "release:patch": "npm version patch && npm publish",
+    "release:minor": "npm version minor && npm publish",
+    "release:major": "npm version major && npm publish"
   },
   "repository": {
     "type": "git",
