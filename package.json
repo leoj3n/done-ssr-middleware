@@ -1,6 +1,6 @@
 {
   "name": "done-ssr-middleware",
-  "version": "0.3.0",
+  "version": "1.0.0-alpha.3",
   "description": "Express/Connect middleware for DoneJS applications",
   "main": "lib/index.js",
   "directories": {
@@ -9,7 +9,11 @@
   "scripts": {
     "copy": "node scripts/copy.js",
     "mocha": "node test/test.js",
-    "test": "npm run copy && npm run mocha"
+    "test": "npm run copy && npm run mocha",
+    "publish": "git push origin && git push origin --tags",
+    "release:patch": "npm version patch && npm publish",
+    "release:minor": "npm version minor && npm publish",
+    "release:major": "npm version major && npm publish"
   },
   "repository": {
     "type": "git",
@@ -27,21 +31,25 @@
   },
   "homepage": "https://github.com/donejs/done-ssr-middleware#readme",
   "devDependencies": {
-    "can": "^2.3.0-pre || ^2.3.0-beta || ^2.3.0",
-    "can-fixture": "^0.1.2",
+    "can-component": "^3.0.4",
+    "can-fixture": "^1.0.11",
+    "can-list": "^3.0.2",
+    "can-map": "^3.0.4",
+    "can-map-define": "^3.0.2",
+    "can-route": "^3.0.6",
+    "can-route-pushstate": "^3.0.1",
     "copy-dir": "0.0.8",
-    "done-autorender": "^0.7.0",
+    "done-autorender": "^1.0.0-alpha.0",
+    "done-css": "^3.0.0-alpha.2",
     "express": "^4.13.4",
-    "jquery": "^2.2.3",
+    "jquery": "2.x - 3.x",
     "mocha": "^2.4.5",
+    "nock": "^7.2.2",
     "request": "^2.69.0",
-    "spawn-mochas": "^1.1.0"
+    "spawn-mochas": "^1.1.0",
+    "steal-tools": "^1.0.3"
   },
   "dependencies": {
-    "done-autorender": "^0.7.0",
-    "done-ssr": "^0.13.0",
-    "nock": "^7.2.2",
-    "websocket": "^1.0.22",
-    "xmlhttprequest": "^1.7.0"
+    "done-ssr": "^1.0.0-alpha.1"
   }
 }

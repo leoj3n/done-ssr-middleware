@@ -3,7 +3,7 @@
 		<title>test page</title>
 	</head>
 	<body>
-		<can-import from="./progressive/routes"/>
+		<can-import from="progressive/routes"/>
 		<can-import from="progressive/appstate" as="viewModel" />
 		<can-import from="progressive/main.css!"/>
 
@@ -29,6 +29,10 @@
 
 		{{#if request}}
 			<div>Showing: {{request.url}}</div>
+		{{/if}}
+
+		{{#if loader}}
+			<div>Main: {{loader.main}}</div>
 		{{/if}}
 	</body>
 </html>
