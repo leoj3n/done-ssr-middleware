@@ -1,6 +1,6 @@
 {
   "name": "done-ssr-middleware",
-  "version": "1.0.0",
+  "version": "1.1.0-supercache.0",
   "description": "Express/Connect middleware for DoneJS applications",
   "main": "lib/index.js",
   "directories": {
@@ -50,6 +50,6 @@
     "steal-tools": "^1.0.3"
   },
   "dependencies": {
-    "done-ssr": "^1.0.0-alpha.1"
+    "done-ssr": "supercache"
   }
 }
