@@ -7,7 +7,7 @@ var stealTools = require('steal-tools');
 var ssr = require('../lib/index');
 
 describe("done-ssr middleware - production", function() {
-	this.timeout(10000);
+	this.timeout(30000);
 
 	beforeEach(function() {
 		this.oldEnv = process.env.NODE_ENV;
