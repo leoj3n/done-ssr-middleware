@@ -3,3 +3,4 @@ script: npm test
 node_js:
   - "6"
   - "7"
+  - "8"
