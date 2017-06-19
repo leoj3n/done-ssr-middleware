@@ -4,6 +4,8 @@
 
 # done-ssr-middleware
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/donejs/done-ssr-middleware.svg)](https://greenkeeper.io/)
+
 Simple Express/Connect middleware for server-side rendering your DoneJS application.
 
 ## Install
