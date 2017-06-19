@@ -1,3 +1,8 @@
-var copy = require("copy-dir").sync;
+var copy = require("recursive-copy");
 
-copy("node_modules", "test/tests/node_modules");
+var p = copy("node_modules", "test/tests/node_modules", { overwrite: true });
+
+p.catch(function(err){
+	console.error(err);
+	process.exit(1);
+});
