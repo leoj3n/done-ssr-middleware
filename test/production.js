@@ -8,6 +8,7 @@ var ssr = require('../lib/index');
 
 describe("done-ssr middleware - production", function() {
 	this.timeout(30000);
+	var root = path.join(__dirname, 'tests');
 
 	beforeEach(function() {
 		this.oldEnv = process.env.NODE_ENV;
@@ -18,38 +19,53 @@ describe("done-ssr middleware - production", function() {
 		process.env.NODE_ENV = this.oldEnv;
 	});
 
-	it('uses middleware in an Express application', function(done) {
-		var root = path.join(__dirname, 'tests');
+	before(function(done){
 		var config = path.join(root, 'package.json') + '!npm';
 
 		stealTools.build({
 			config: config,
-			main: [ "progressive/index.stache!done-autorender" ]
-		}, {})
-		.then(function() {
-			var app = express()
-				.use('/', express.static(root))
-				.use('/', ssr({
-					config: path.join(root, 'package.json') + '!npm'
-				}));
+			main: [ "basics-can/progressive/index.stache!done-autorender" ]
+		}, {
+			minify: false,
+			quiet: true
+		}).then(function(){
+			done();
+		}, done);
+	});
 
-			var server = app.listen(5500);
+	function createServer(middleware, onListening) {
+		var app = express()
+			.use('/', express.static(root))
+			.use('/', middleware);
 
-			server.on('listening', function() {
-				request('http://localhost:5500', function(err, res, body) {
-					assert.equal(res.statusCode, 200);
-					assert.ok(/You are home/.test(body), 'Got body');
-					assert.ok(/Showing: \//.test(body),
-							'The request object is accessible from the AppViewModel');
-					assert.ok(/progressive\/index.stache!done-autorender/.test(body),
-								'The "main" is set correctly')
+		var server = app.listen(5500);
 
-					var contentType = res.headers['content-type'];
-					assert.equal(contentType, 'text/html; charset=utf-8',
-								'set the correct content type');
-					server.close(done);
-				});
+		server.on('listening', function() {
+			onListening(server);
+		});
+	}
+
+	it('uses middleware in an Express application', function(done) {
+		var mw = ssr({
+			main: "basics-can/progressive/index.stache!done-autorender",
+			config: path.join(root, 'package.json') + '!npm'
+		});
+
+		createServer(mw, function(server){
+			request('http://localhost:5500', function(err, res, body) {
+				assert.equal(res.statusCode, 200);
+				assert.ok(/You are home/.test(body), 'Got body');
+				assert.ok(/Showing: \//.test(body),
+						'The request object is accessible from the AppViewModel');
+				assert.ok(/progressive\/index.stache!done-autorender/.test(body),
+							'The "main" is set correctly')
+
+				var contentType = res.headers['content-type'];
+				assert.equal(contentType, 'text/html; charset=utf-8',
+							'set the correct content type');
+				server.close(done);
 			});
+
 		});
 	});
 });
