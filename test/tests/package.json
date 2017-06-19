@@ -1,7 +1,7 @@
 {
   "name": "basics-can",
   "version": "0.0.1",
-  "main": "does-not-exist.stache!done-autorender",
+  "main": "progressive/index.stache!done-autorender",
   "dependencies": {
     "can-component": "^3.0.4",
     "can-fixture": "^1.0.11",
@@ -14,7 +14,6 @@
     "done-css": "^3.0.0-alpha.2"
   },
   "steal": {
-    "main": "progressive/index.stache!done-autorender",
     "envs": {
       "someenv": {
         "renderingBaseURL": "http://example.com/",
