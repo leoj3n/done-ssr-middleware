@@ -1,15 +1,11 @@
 var loader = require("@loader");
-var Map = require("can-map");
-require("can-map-define");
+var DefineMap = require("can-define/map/map");
 
-debugger;
-
-module.exports = Map.extend({
-	define: {
-		loader: {
-			serialize: false,
-			value: loader
-		}
+module.exports = DefineMap.extend({
+	statusMessage: "string",
+	loader: {
+		serialize: false,
+		value: () => loader
 	},
 	throwError: function() {
 		throw Error('Something went wrong');
